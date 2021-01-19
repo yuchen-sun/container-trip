@@ -1,0 +1,74 @@
+site_name: Container Trip
+site_description: Container Insight！
+site_author: Yuchen
+# site_url: https://squidfunk.github.io/mkdocs-material/
+
+# Repository
+# repo_name: yuchen-sun/docker-journey
+# repo_url: https://github.com/yuchen-sun/docker-journey
+# edit_uri: ""
+
+# Copyright
+copyright: 'Yuchen'
+
+# Configuration
+theme:
+  name: material
+  language: zh
+  palette:
+    primary: blue
+    accent: blue
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/images/favicon.png
+
+extra_css:
+  - css/styles.css
+  - css/dark-mode.css
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# Customization
+extra:
+  social:
+    - type: github-alt
+      link: https://github.com/yuchen-sun/docker-journey
+
+# Extensions
+markdown_extensions:
+  - meta
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.footnotes
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: dockersamples
+      repo: 101-tutorial
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - attr_list
+
+# Page tree
+nav:
+  - README: tutorial/index.md
+  - 安装Docker: 
+     - Mac/Windows: tutorial/install/win-mac.md
+     - Linux: tutorial/install/linux.md
