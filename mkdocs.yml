@@ -72,3 +72,5 @@ nav:
   - 安装Docker: 
      - Mac/Windows: tutorial/install/win-mac.md
      - Linux: tutorial/install/linux.md
+  - 容器镜像: 
+    - medium 镜像的含义: tutorial/images/镜像的含义.md
