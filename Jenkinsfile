@@ -3,10 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''docker buildx build \\
-      --platform linux/amd64,linux/arm64 \\
-      -t docker/getting-started:latest \\
-      $( (( $WILL_PUSH == 1 )) && printf %s \'--push\' ) .'''
+        sh '''docker build \\
+      -t 192.168.100.12:5000/wiki-trip:latest .'''
       }
     }
 
