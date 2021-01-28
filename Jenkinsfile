@@ -1,12 +1,17 @@
 pipeline {
-  agent any
-  stages {
-    stage('build') {
-      steps {
-        sh '''git describe --tags `git rev-list --tags --max-count=1`
-env'''
-      }
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo build'
+            }
+        }
+        stage('Deploy') {
+            when { tag "release-*" }
+            steps {
+                echo 'Deploying only because this commit is tagged...'
+                sh 'env'
+            }
+        }
     }
-
-  }
 }
