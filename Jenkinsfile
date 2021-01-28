@@ -7,7 +7,7 @@ pipeline {
             }
         }
         stage('Deploy') {
-            when { tag "release-*" }
+            when { tag "v*" }
             steps {
                 echo 'Deploying only because this commit is tagged...'
                 sh 'env'
