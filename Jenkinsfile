@@ -11,6 +11,7 @@ pipeline {
             steps {
                 echo 'Deploying only because this commit is tagged...'
                 sh 'env'
+                sh 'echo $GIT_BRANCH'
             }
         }
     }
