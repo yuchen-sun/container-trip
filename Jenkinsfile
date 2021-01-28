@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'env'
+        sh '''git describe --tags `git rev-list --tags --max-count=1`
+env'''
       }
     }
 
