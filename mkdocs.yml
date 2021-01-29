@@ -1,5 +1,5 @@
-site_name: Container Trip
-site_description: Container Insight！
+site_name: Wiki Trip
+site_description: Wiki Insight！
 site_author: Yuchen
 # site_url: https://squidfunk.github.io/mkdocs-material/
 
@@ -68,9 +68,17 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - README: tutorial/index.md
-  - 安装Docker: 
-     - Mac/Windows: tutorial/install/win-mac.md
-     - Linux: tutorial/install/linux.md
-  - 容器镜像: 
-    - medium 镜像的含义: tutorial/images/镜像的含义.md
+  - README: trip/index.md
+  - Docker: 
+    - 提纲: trip/container/README.md
+    - 安装Docker: 
+      - Mac/Windows: trip/container/install/win-mac.md
+      - Linux: trip/container/install/linux.md
+    - 容器: 
+      - 运行你的第一个容器: trip/container/tutorials/run.md
+      - medium 容器，进程，虚拟机: trip/container/containers/container-process-vm.md
+    - 容器镜像: 
+      - medium 镜像的含义: trip/container/images/images.md
+  - Lustre:
+    - 安装Lustre:
+      - 简易版: trip/lustre/install/install.md
